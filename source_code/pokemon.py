@@ -1,7 +1,3 @@
-# mclements20@georgefox.edu
-# CSIS 485
-# Final Project
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

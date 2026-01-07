@@ -1,13 +1,9 @@
-#mclements20@georgefox.edu
-#2/18/2021
-#exploye.py
 
 
 #all the imports into the program
 import numpy as np
 import matplotlib.pyplot as plt
 
-#this is the main function
 def main():
     batting = np.genfromtxt("BattingStats.csv", dtype=None, delimiter=",", skip_header=1,
                               usecols=(0, 1, 3, 4, 6, 8, 11, 16),
@@ -146,5 +142,5 @@ def num_zero(num_str):
 
 
 
-
-main()
+if __name__ == "__main__":
+    main()

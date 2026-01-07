@@ -1,12 +1,12 @@
-#author: maverickclements20@georgefox.edu
+# a test to predict pokemon types -
 
 
-# My Hypothesis: We hypothesize that in all the generations of Pokemon, Fire types are stronger than Dark types in terms of overall stats.
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 from scipy import stats as stats
 from scipy.stats import ttest_ind
+
 def main():
     ALPHA = .05
 
@@ -78,9 +78,12 @@ def main():
     else:
         print("We can not reject the hypothesis")
 
+    plot_data(avg_x)
+
+def plot_data(x):
     #create the histogram to check the normality of the distribution
     plt.hist(x, bins=8, edgecolor="black", color="teal", label="Fire and Dark Pokemon")
-    plt.axvline(x=avg_x, color="blue", label="Pokemon Mean")
+    plt.axvline(x=x, color="blue", label="Pokemon Mean")
     #plt.hist(fire_pokemon_stats, bins=8, edgecolor="black", color="red", label="Fire Pokemon")
     #plt.axvline(x=fire_avg_stat, color="maroon", label="Fire mean")
     #plt.hist(dark_pokemon_stats, bins=8, edgecolor="black", color='purple', label="Dark Pokemon")
@@ -96,6 +99,7 @@ def main():
 
 
 
+if __name__ == "__main__":
 
-main()
+    main()
 
